@@ -516,6 +516,32 @@ The goal: **translate metrics into business actions.**
 3. **Segment & Correlate:** Use SQL, BI, and product analytics tools.  
 4. **Communicate Findings:** Convert metrics into actionable business recommendations.
 
----
-
-> These “Why” questions help move from **reporting metrics → explaining metrics**, enabling analysts to guide **data-driven decisions** for growth, retention, and efficiency.
+# Possible Causes of High Cart Abandonment
+1️⃣Pricing & Cost Issues
+Unexpected delivery fees, taxes, or service charges.
+Cart value too high or perceived as expensive.
+Lack of discounts or offers.
+2️⃣ Checkout Process Friction
+Too many steps to complete the order.
+Forced account creation.
+Complex forms (address, payment, contact info).
+Slow app or website performance.
+3️⃣ Payment Issues
+Limited payment options.
+Failed payment transactions.
+Security concerns or lack of trust badges.
+4️⃣ User Behavior & Intent
+Browsing without intent to buy (window shopping).
+Comparison with competitors.
+Decision fatigue from too many menu options.
+5️⃣ Delivery & Logistics Concerns
+Long estimated delivery times.
+Lack of clarity on delivery charges or schedules.
+No live order tracking.
+6️⃣ Technical & UX Problems
+App crashes or slow loading pages.
+Bugs in the cart or checkout flow.
+Poor mobile responsiveness.
+7️⃣ External Distractions
+Users get interrupted during checkout.
+Users abandon cart while switching devices or sessions.
