@@ -548,3 +548,20 @@ The goal: **translate metrics into business actions.**
 - App crashes or slow loading pages.
 - Bugs in the cart or checkout flow.
 - Poor mobile responsiveness.
+
+
+## 📋 Top Problems Table
+
+| # | Problem | Cause | Business Impact | Possible Mitigation |
+|---|---------|-------|-----------------|-------------------|
+| 1 | **Late Deliveries** | Traffic, rider shortage, long prep time | Customer dissatisfaction, lower retention, negative reviews | Route optimization, surge rider allocation, realistic ETAs |
+| 2 | **High Order Cancellations** | Restaurants reject orders, items out of stock, rider unavailability | Revenue loss, lower GMV, trust issues | Real-time inventory, automated alerts, rider availability prediction |
+| 3 | **Customer Churn After First Order** | Poor experience, long wait, discount-only first order | Reduced LTV, wasted acquisition cost | Onboarding offers, first-order feedback, follow-up incentives |
+| 4 | **Payment Failures** | Gateway errors, card declines, app bugs | Lost revenue, negative user experience | Multiple payment options, error handling, retry mechanisms |
+| 5 | **Low Restaurant Acceptance Rate** | High order load, system downtime, poor incentives | Order delays, increased cancellations | Smart order routing, restaurant SLA monitoring, dynamic incentives |
+| 6 | **Poor Food Quality / Incorrect Orders** | Kitchen errors, packaging issues, miscommunication | Refunds, negative ratings, customer churn | Restaurant quality checks, verification process, feedback monitoring |
+| 7 | **Rider Attrition / Shortage** | Low pay, idle time, poor support | Delays, failed deliveries, coverage gaps | Incentives, shift optimization, support channels |
+| 8 | **App Performance / Crashes** | Bugs, high traffic, poor device compatibility | Abandonment, lost orders | Load testing, crash reporting, regular updates |
+| 9 | **Limited Restaurant Choice in Area** | New cities, low onboarding, high churn of restaurants | Low orders, customer frustration | Aggressive partner acquisition, geo-expansion strategy |
+| 10 | **Poor Customer Support** | Slow response, lack of real-time issue resolution | Negative reviews, lower retention | 24/7 support, AI chatbots, SLA tracking |
+
