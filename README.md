@@ -89,15 +89,113 @@ It covers **Supply**, **Demand**, **Delivery Operations**, **Product**, and **Fi
 
 ---
 
-## 🧩 How to Use This Document
-- ✅ As a **reference guide** for analytics onboarding or dashboard design.  
-- 📊 To design **data models** aligned with each KPI.  
-- 🧭 As a **decision framework** for prioritizing product or business improvements.  
+# 🍔 Food Delivery App – Analytical Questions & KPIs
+
+This document contains analytical questions, key metrics, and example analytical thinking scenarios for a **Food Delivery App**.  
+It’s designed for **Business & Product Analytics** professionals preparing for analytical roles or building dashboards and insight frameworks.
 
 ---
 
-### 👨‍💻 Author
-*Business & Product Analytics Documentation — Food Vertical*  
-Maintained by: **[Your Name]**  
+## 📊 1. Orders & GMV
+
+| # | Analytical Question | Related Metric | Why It Matters |
+|---|----------------------|----------------|----------------|
+| 1 | How is the trend of daily active orders (YoY, MoM, WoW)? | **Orders / Day** | Helps track business growth and demand seasonality. |
+| 2 | What is the average order value (AOV) trend across different cities and cuisines? | **AOV = GMV / Orders** | Identifies upsell/cross-sell opportunities. |
+| 3 | How much GMV is contributed by repeat vs new customers? | **GMV Share** | Evaluates retention and acquisition balance. |
+| 4 | Which restaurants contribute most to GMV and their avg. delivery time? | **GMV per Restaurant** | Pinpoints top partners and operational performance. |
+| 5 | What % of GMV is lost due to cancellations/refunds? | **Cancelled GMV %** | Quantifies revenue leakage and service reliability. |
+
+---
+
+## 👥 2. Customer Behavior & Retention
+
+| # | Analytical Question | Related Metric | Why It Matters |
+|---|----------------------|----------------|----------------|
+| 6 | What is the Day 7 and Day 30 retention of new users? | **Retention Rate = Returning Users / New Users** | Indicates stickiness and long-term growth. |
+| 7 | What % of users churn after their first order? | **Churn Rate = Lost Users / Active Users** | Highlights onboarding or experience gaps. |
+| 8 | How does order frequency differ for loyal vs casual users? | **Orders per User** | Helps segment customers and plan loyalty programs. |
+| 9 | What is the conversion rate from browse → order? | **Conversion = Orders / Visitors** | Shows funnel efficiency. |
+| 10 | Which user segment has the highest LTV? | **LTV = AOV × Frequency × Duration** | Identifies high-value cohorts for targeting. |
+
+---
+
+## 🍽️ 3. Restaurant Performance
+
+| # | Analytical Question | Related Metric | Why It Matters |
+|---|----------------------|----------------|----------------|
+| 11 | Which restaurants have high rejection/cancellation rates? | **Restaurant Cancellation %** | Affects customer satisfaction and reliability. |
+| 12 | How does restaurant rating correlate with order volume? | **Correlation (Rating, Orders)** | Measures the impact of quality on sales. |
+| 13 | Do promoted restaurants show better conversion or AOV? | **AOV / Conversion** | Tests effectiveness of promotion spend. |
+| 14 | What’s the GMV impact of restaurant onboarding? | **Δ GMV / New Restaurants** | Measures supply-side growth efficiency. |
+
+---
+
+## 🚴 4. Delivery Operations
+
+| # | Analytical Question | Related Metric | Why It Matters |
+|---|----------------------|----------------|----------------|
+| 15 | What’s the average delivery time by city/time of day? | **Avg Delivery Time = Drop-off - Pickup** | Detects bottlenecks in logistics. |
+| 16 | How many orders face rider unavailability or late pickups? | **Delayed Orders %** | Highlights supply-demand mismatches. |
+| 17 | How does restaurant-to-customer distance affect cancellations? | **Correlation (Distance, Cancellation)** | Optimizes dispatch & delivery zone logic. |
+
+---
+
+## 💸 5. Marketing & ROI
+
+| # | Analytical Question | Related Metric | Why It Matters |
+|---|----------------------|----------------|----------------|
+| 18 | What’s the CAC for each acquisition channel? | **CAC = Spend / New Users** | Evaluates marketing efficiency. |
+| 19 | What’s the ROI of first-order discounts? | **ROI = Incremental Revenue / Spend** | Determines profitability of promos. |
+| 20 | Do campaign-driven users show better engagement? | **Engagement Rate, LTV** | Tests marketing quality, not just volume. |
+
+---
+
+## 🧮 Key Metric Formulas
+
+| Metric | Formula | Interpretation |
+|--------|----------|----------------|
+| **GMV (Gross Merchandise Value)** | Σ(Order Value) | Overall sales volume. |
+| **AOV (Average Order Value)** | GMV / Orders | Avg spend per order. |
+| **CAC (Customer Acquisition Cost)** | Marketing Spend / New Customers | Cost of acquiring a new customer. |
+| **LTV (Lifetime Value)** | AOV × Frequency × Duration | Value of a user over time. |
+| **Conversion Rate** | Orders / Visitors | Funnel efficiency. |
+| **Churn Rate** | Lost Users / Active Users | Customer loss rate. |
+| **Retention Rate** | Returning Users / Total Users | Customer loyalty. |
+| **On-time Delivery %** | On-time Deliveries / Total Deliveries | Logistics reliability. |
+| **Cancellation %** | Cancelled Orders / Total Orders | Quality and service level indicator. |
+| **Avg Delivery Time** | Drop-off - Pickup | Speed and efficiency. |
+
+---
+
+## 🧠 Analytical Thinking Example
+
+### ❓ Question: Why is customer churn high after their first order?
+
+### 🔍 How to Analyze It
+
+| Step | What to Do | Tools / Data Needed |
+|------|-------------|--------------------|
+| 1 | Identify churned users (placed 1 order, no activity after X days). | SQL cohort analysis, retention table. |
+| 2 | Segment by **region, cuisine, delivery time, order rating, promo use**. | User tables, order metadata, feedback logs. |
+| 3 | Compare churned vs retained users on key dimensions: AOV, delivery delay, satisfaction score. | Exploratory data analysis, BI dashboard. |
+| 4 | Conduct funnel drop-off analysis (App Open → Browse → Add to Cart → Checkout → Order). | Product analytics / Amplitude / Mixpanel. |
+| 5 | Analyze NPS or CSAT feedback for complaints (cold food, late delivery, wrong items). | Text mining or survey data. |
+| 6 | Check if first-order experience was **discount-driven** (high promo dependency). | Campaign attribution data. |
+| 7 | Quantify financial impact: lost LTV × churned users = revenue leakage. | SQL + Financial model. |
+
+### 📈 Possible Findings
+
+- Long delivery times or order rejections cause dissatisfaction.  
+- Discount-only customers didn’t find long-term value.  
+- Poor first-order UX or app bugs reduced conversion to repeat.  
+- Limited restaurant options in new cities.  
+
+### 💡 Actionable Insights
+
+- Introduce **“Second Order Offers”** to retain first-time users.  
+- Launch **delivery quality monitoring** dashboard (alerts for >45 min).  
+- Improve **onboarding & discovery UX** (show popular restaurants first).  
+- Implement **feedback-driven recovery** (auto-compensate poor experience).  
 
 ---
