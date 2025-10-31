@@ -199,3 +199,323 @@ It’s designed for **Business & Product Analytics** professionals preparing for
 - Implement **feedback-driven recovery** (auto-compensate poor experience).  
 
 ---
+
+
+# 🧠 Diagnostic Analysis Guide — Food Delivery App
+
+This section focuses on **“Why” analytical questions** that help uncover the root causes of metric changes.  
+Each scenario assumes you’re monitoring KPIs (GMV, Orders, AOV, Retention, etc.) and notice a change — either up 📈 or down 📉.  
+The goal: **translate metrics into business actions.**
+
+---
+
+## 1. Why has customer churn increased by 12% this month?
+**Possible Causes**
+- Delivery delays or poor first-order experience.  
+- Reduced discounts or promo offers expired.  
+- Service downtime or fewer active restaurants.
+
+**How to Analyze**
+- Run retention cohort by order week.  
+- Compare delivery time, ratings, and refund rates for churned vs retained users.  
+- Review promo campaign calendar overlap.
+
+**Data Needed:** user_orders, delivery_logs, campaigns, feedback.
+
+---
+
+## 2. Why has Average Order Value (AOV) dropped by 8%?
+**Possible Causes**
+- More low-priced menu items ordered.  
+- Discounts increased or smaller order baskets.  
+- Shift toward budget restaurants.
+
+**How to Analyze**
+- Segment orders by restaurant type, category, and city.  
+- Check campaign data for high discount usage.  
+- Trend item count per order and price mix.
+
+**Data Needed:** order_items, restaurants, promotions.
+
+---
+
+## 3. Why has Gross Merchandise Value (GMV) declined by 10%?
+**Possible Causes**
+- Drop in total orders or AOV.  
+- Fewer active users or higher churn.  
+- Reduced restaurant availability.
+
+**How to Analyze**
+- Break down GMV = Orders × AOV.  
+- Compare week-over-week growth by city or restaurant.  
+- Identify external factors (weather, events, outages).
+
+**Data Needed:** orders, user_sessions, restaurant_status.
+
+---
+
+## 4. Why did total orders drop by 15% compared to last month?
+**Possible Causes**
+- Seasonal change or festival period ended.  
+- Decrease in marketing campaigns.  
+- App performance or checkout issues.
+
+**How to Analyze**
+- Funnel analysis: App Visit → Cart → Checkout → Order.  
+- A/B test logs or system downtime records.  
+- Marketing spend vs order correlation.
+
+**Data Needed:** funnel_events, marketing_spend, app_logs.
+
+---
+
+## 5. Why did user retention rate decrease by 5%?
+**Possible Causes**
+- Poor re-engagement campaigns.  
+- Service inconsistency (late deliveries, stockouts).  
+- Lack of loyalty or referral incentives.
+
+**How to Analyze**
+- Track reactivation campaign performance.  
+- Compare experience scores for retained vs churned users.  
+- Segment by customer acquisition source.
+
+**Data Needed:** retention_table, campaign_logs, csat_scores.
+
+---
+
+## 6. Why has customer acquisition cost (CAC) increased by 20%?
+**Possible Causes**
+- Increased ad competition or higher CPC.  
+- Inefficient targeting or low conversion.  
+- Fewer organic installs.
+
+**How to Analyze**
+- Track CAC by channel (Facebook, Google, Referrals).  
+- Measure conversion funnel performance.  
+- Evaluate creative performance and CTR.
+
+**Data Needed:** marketing_channels, user_acquisition, conversions.
+
+---
+
+## 7. Why did lifetime value (LTV) per user fall by 10%?
+**Possible Causes**
+- Lower order frequency or smaller baskets.  
+- Shorter retention duration.  
+- Promo-heavy acquisition leading to low-quality users.
+
+**How to Analyze**
+- Compute LTV decomposition: AOV × Frequency × Duration.  
+- Cohort users by acquisition source and track 90-day value.  
+- Compare revenue vs marketing cost ROI.
+
+**Data Needed:** user_orders, retention_data, acquisition_source.
+
+---
+
+## 8. Why has conversion rate from browse → order dropped by 6%?
+**Possible Causes**
+- App performance lag or checkout issues.  
+- High delivery fees or unavailable restaurants.  
+- Poor product discovery.
+
+**How to Analyze**
+- Funnel analysis in Amplitude / Mixpanel.  
+- Compare session duration, add-to-cart rate.  
+- Check app error logs and A/B experiment data.
+
+**Data Needed:** funnel_events, app_errors, pricing_tables.
+
+---
+
+## 9. Why has the on-time delivery rate dropped by 9%?
+**Possible Causes**
+- Rider shortages or peak-hour congestion.  
+- Restaurant preparation delays.  
+- Poor route optimization.
+
+**How to Analyze**
+- Compare delivery times by zone and shift.  
+- Map late deliveries vs weather or traffic data.  
+- Monitor rider supply-demand ratio.
+
+**Data Needed:** delivery_logs, rider_availability, weather_api.
+
+---
+
+## 10. Why have order cancellations increased by 11%?
+**Possible Causes**
+- Restaurant stockouts or delayed preparation.  
+- Rider unavailability.  
+- Customer-side cancellations due to high wait times.
+
+**How to Analyze**
+- Categorize cancellation reasons.  
+- Check average time to assign riders.  
+- Identify top cancelling restaurants.
+
+**Data Needed:** cancellation_logs, restaurant_data, rider_dispatch.
+
+---
+
+## 11. Why has repeat purchase rate declined by 7%?
+**Possible Causes**
+- First-order disappointment.  
+- Lack of personalized re-engagement.  
+- High competition or alternative platforms.
+
+**How to Analyze**
+- Track 2nd order conversion per user.  
+- Analyze satisfaction scores for 1st order.  
+- Compare repeat rates across promo cohorts.
+
+**Data Needed:** user_orders, csat, promotions.
+
+---
+
+## 12. Why has delivery time increased by 6 minutes on average?
+**Possible Causes**
+- Traffic congestion or weather issues.  
+- Reduced rider capacity.  
+- Longer restaurant preparation times.
+
+**How to Analyze**
+- Time-series delivery duration vs rider supply.  
+- Split by city, shift, cuisine type.  
+- Compare to SLA thresholds.
+
+**Data Needed:** delivery_time_logs, rider_shift_data.
+
+---
+
+## 13. Why has A/B tested feature adoption decreased by 10% after release?
+**Possible Causes**
+- Feature not clearly visible in UI.  
+- Poor user education or relevance.  
+- Technical issues on mobile devices.
+
+**How to Analyze**
+- Compare adoption across device types and cohorts.  
+- Check crash/error logs.  
+- Run user journey heatmaps.
+
+**Data Needed:** ab_test_results, user_events, device_logs.
+
+---
+
+## 14. Why have restaurant ratings dropped by 0.3 stars on average?
+**Possible Causes**
+- Quality decline due to rush hours.  
+- Packaging or temperature issues.  
+- Delivery experience impacting restaurant rating.
+
+**How to Analyze**
+- Sentiment analysis on review comments.  
+- Segment by cuisine, time of day, order volume.  
+- Cross-check delivery delays vs rating drops.
+
+**Data Needed:** reviews, sentiment_scores, delivery_logs.
+
+---
+
+## 15. Why has the promo redemption rate fallen by 25%?
+**Possible Causes**
+- Ineffective communication or expired codes.  
+- Reduced promo visibility in app.  
+- Target audience mismatch.
+
+**How to Analyze**
+- Promo impressions vs redemptions.  
+- Analyze campaign reach and timing.  
+- Check promo eligibility filters.
+
+**Data Needed:** campaign_logs, user_segments, promo_events.
+
+---
+
+## 16. Why has the refund rate increased by 5%?
+**Possible Causes**
+- Incorrect or missing items.  
+- Payment gateway issues.  
+- Delivery failures.
+
+**How to Analyze**
+- Categorize refunds by cause.  
+- Check restaurants with repeated refund cases.  
+- Identify logistic hotspots causing failures.
+
+**Data Needed:** refund_logs, restaurant_data, payment_records.
+
+---
+
+## 17. Why has new restaurant onboarding slowed down by 18%?
+**Possible Causes**
+- Delays in approval process.  
+- Reduced acquisition efforts or incentives.  
+- Market saturation.
+
+**How to Analyze**
+- Track funnel: signup → approval → active.  
+- Compare partner acquisition campaign budgets.  
+- Interview sales/ops teams.
+
+**Data Needed:** restaurant_onboarding, partner_sales, crm_logs.
+
+---
+
+## 18. Why has rider churn increased by 10%?
+**Possible Causes**
+- Low incentive payments.  
+- Long idle time between deliveries.  
+- Poor support or app issues.
+
+**How to Analyze**
+- Calculate earnings/hour trends.  
+- Correlate churn with low-earning shifts.  
+- Review feedback surveys.
+
+**Data Needed:** rider_activity, payouts, survey_feedback.
+
+---
+
+## 19. Why has delivery success rate dropped by 3%?
+**Possible Causes**
+- More failed deliveries or address mismatches.  
+- System bugs in assignment algorithm.  
+- Poor weather conditions.
+
+**How to Analyze**
+- Review failure codes by city.  
+- Check GPS mismatches and address formats.  
+- Audit delivery app logs.
+
+**Data Needed:** delivery_logs, gps_tracking, error_events.
+
+---
+
+## 20. Why has app engagement (DAU/MAU) decreased by 8%?
+**Possible Causes**
+- Reduced push notification effectiveness.  
+- Feature fatigue or poor UX.  
+- Competing apps or external factors.
+
+**How to Analyze**
+- Monitor session frequency and duration.  
+- Evaluate push open rate & CTR.  
+- Review product release impact on engagement.
+
+**Data Needed:** user_sessions, push_notification_logs, feature_flags.
+
+---
+
+## 🔍 How to Use These Questions
+
+1. **Detect KPI Movement:** Monitor dashboards daily/weekly.  
+2. **Trigger Root Cause Analysis:** Ask “Why?” when change > ±5%.  
+3. **Segment & Correlate:** Use SQL, BI, and product analytics tools.  
+4. **Communicate Findings:** Convert metrics into actionable business recommendations.
+
+---
+
+> These “Why” questions help move from **reporting metrics → explaining metrics**, enabling analysts to guide **data-driven decisions** for growth, retention, and efficiency.
