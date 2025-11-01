@@ -583,3 +583,30 @@ In the restaurant menu, the price is shown as “starting from,” usually refle
 - 12” → required additional price +Y
 
 This approach makes sense when users are selecting add-ons, but for different item sizes, it becomes confusing. It looks like the larger sizes are add-ons instead of separate price options.
+
+
+## Ideas want to share 
+
+### Chatbot Ordering Assistant
+- “I’d add a chatbot-based ordering assistant that allows users to order simply by chatting, for example saying, ‘Order my usual pizza’ or ‘Find me something spicy for dinner’.    The AI would recognize the user’s past orders and preferences and place the order or suggest items automatically.”
+
+Value / Customer Impact:
+- Convenience: Users don’t have to browse the entire menu — it’s conversational and quick.
+- Personalization: AI learns user behavior over time and tailors suggestions.
+- Retention: Makes the app feel like a personal food assistant, improving repeat usage.
+
+### Smart Notifications
+- “AI can analyze user activity and send intelligent notifications, such as when a favorite restaurant offers discounts, or when it’s dinner time based on past ordering habits.”
+
+Value / Customer Impact:
+- Personalized Engagement: Notifications feel relevant, not spammy.
+- Increased Conversions: Timely, data-driven notifications lead to higher order frequency.
+- Retention: Keeps users connected to the platform without overwhelming them.
+
+### Voice Ordering
+- “Voice ordering integration allows users to place or repeat orders using voice commands — either directly in the app or via assistants like Google Assistant or Siri.”
+
+Value / Customer Impact:
+- Accessibility: Easier for users who are driving, busy, or prefer hands-free interaction.
+- Faster Experience: Reduces ordering friction to just a few spoken words.
+- Innovation Appeal: Makes the app stand out as modern and user-friendly.
