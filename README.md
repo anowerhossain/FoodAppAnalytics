@@ -565,3 +565,21 @@ The goal: **translate metrics into business actions.**
 | 9 | **Limited Restaurant Choice in Area** | New cities, low onboarding, high churn of restaurants | Low orders, customer frustration | Aggressive partner acquisition, geo-expansion strategy |
 | 10 | **Poor Customer Support** | Slow response, lack of real-time issue resolution | Negative reviews, lower retention | 24/7 support, AI chatbots, SLA tracking |
 
+## Problems Identified in Pathao Food
+
+### 1. Variant Selection Issue (Pizza Size Problem)
+
+When I try to order pizzas of the same variant but different sizes (e.g., one 8” and one 12”), the app doesn’t allow adding both sizes separately.
+
+- If I first add an 8” pizza and then select a 12” from the same variant, it updates the existing cart item instead of adding a new one.
+- This makes it impossible to order multiple sizes of the same pizza variant together.
+
+### Pricing Display Confusion (Size vs Add-on Pricing)
+
+In the restaurant menu, the price is shown as “starting from,” usually reflecting the base 8” size. When I open the item, it shows:
+
+- 8” → additional price +0
+- 10” → required additional price +X
+- 12” → required additional price +Y
+
+This approach makes sense when users are selecting add-ons, but for different item sizes, it becomes confusing. It looks like the larger sizes are add-ons instead of separate price options.
